@@ -21,6 +21,7 @@ SRCS =	ft_isallow.c \
 		ft_isascii.c \
 		ft_isdigit.c \
 		ft_islower.c \
+		ft_isnumber.c \
 		ft_isprint.c \
 		ft_isspace.c \
 		ft_isupper.c \
@@ -102,7 +103,7 @@ SRCS =	ft_isallow.c \
 
 OBJS = $(SRCS:.c=.o)
 
-CC = clang
+CC = clang-3.5
 C_FLAG = -Wall -Wextra -Werror -pipe
 
 
