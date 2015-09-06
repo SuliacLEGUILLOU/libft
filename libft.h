@@ -170,6 +170,7 @@ void			ft_putnbr_fd(int n, int fd);
 **	- iteration, map
 */
 t_list			*ft_lstnew(void const *content, size_t content_size);
+t_list			*ft_lstnew_id(void *point);
 
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstaddend(t_list **lst, t_list *elem);

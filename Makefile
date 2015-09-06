@@ -38,6 +38,7 @@ SRCS =	ft_isallow.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_lstnew.c \
+		ft_lstnew_id.c \
 		ft_bzero.c \
 		ft_memalloc.c \
 		ft_memccpy.c \
@@ -103,7 +104,7 @@ SRCS =	ft_isallow.c \
 
 OBJS = $(SRCS:.c=.o)
 
-CC = clang-3.5
+CC = clang
 C_FLAG = -Wall -Wextra -Werror -pipe
 
 
