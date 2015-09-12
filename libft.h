@@ -143,7 +143,7 @@ char			*ft_itoa(int n);
 **	- Get information
 */
 int				ft_getpow(long n);
-int				ft_getsigne(long *n);
+int				ft_getsigne(int *n);
 
 /*
 **       Print function

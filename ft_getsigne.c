@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_getsigne(long *n)
+int		ft_getsigne(int *n)
 {
 	if (*n >= 0)
 		return (1);

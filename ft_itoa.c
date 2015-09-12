@@ -36,7 +36,7 @@ char			*ft_itoa(int n)
 		new = ft_strdup("0");
 		return (new);
 	}
-	signe = ft_getsigne((long*)(&n));
+	signe = ft_getsigne(&n);
 	pow = ft_getpow(n);
 	if (signe == -1 && (new = (char*)malloc(sizeof(char) * (pow + 2))))
 	{
