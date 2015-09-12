@@ -26,6 +26,9 @@
 # define S_LONG		sizeof(long)
 # define S_LLONG	sizeof(long long)
 
+# define TRUE	1
+# define FALSE	0
+
 # define BUFF_SIZE	8
 
 typedef char	t_byte;
