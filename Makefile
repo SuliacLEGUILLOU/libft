@@ -15,7 +15,8 @@ LOGIN_AUTEUR = sle_guil
 DEBUG = yes
 
 HEADER = ./
-SRCS =	ft_isallow.c \
+SRCS =	ft_getopt.c \
+		ft_isallow.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
 		ft_isascii.c \

@@ -112,6 +112,7 @@ char			*ft_strmap(char const *s, char (*f)(char));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 int				get_next_line(int fd, char **line);
+int				ft_getopt(int ac, char **av);
 
 /*
 **       Caracter manipulation
