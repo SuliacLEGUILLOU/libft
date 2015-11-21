@@ -6,7 +6,7 @@
 #    By: sle-guil <sle-guil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/05 11:53:15 by sle-guil          #+#    #+#              #
-#    Updated: 2015/04/09 18:58:05 by sle-guil         ###   ########.fr        #
+#    Updated: 2015/11/21 12:59:50 by sle-guil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,7 +110,7 @@ C_FLAG = -Wall -Wextra -Werror -pipe
 
 
 ifeq ($(DEBUG), yes)
-OPT_FLAG = -O0 -g
+OPT_FLAG = -O0 -g3
 else
 OPT_FLAG = -Os -g0
 endif
