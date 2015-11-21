@@ -6,7 +6,7 @@
 /*   By: sle-guil <sle-guil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 14:35:12 by sle-guil          #+#    #+#             */
-/*   Updated: 2014/12/22 17:12:14 by sle-guil         ###   ########.fr       */
+/*   Updated: 2015/11/21 13:11:09 by sle-guil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,25 @@
 static void	rec(int nbr)
 {
 	if (nbr < 10)
-		ft_putchar ('0' + nbr);
+		ft_putchar('0' + nbr);
 	else
 	{
-		rec (nbr / 10);
-		rec (nbr % 10);
+		rec(nbr / 10);
+		rec(nbr % 10);
 	}
 }
 
 void		ft_putnbr(int n)
 {
 	if (n == -2147483648)
-		write (1, "-2147483648", 11);
+		write(1, "-2147483648", 11);
 	else
 	{
 		if (n < 0)
 		{
-			write (1, "-", 1);
+			write(1, "-", 1);
 			n = 0 - n;
 		}
-		rec (n);
+		rec(n);
 	}
 }

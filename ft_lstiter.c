@@ -6,7 +6,7 @@
 /*   By: sle-guil <sle-guil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 16:45:23 by sle-guil          #+#    #+#             */
-/*   Updated: 2014/11/12 17:00:23 by sle-guil         ###   ########.fr       */
+/*   Updated: 2015/11/21 13:14:03 by sle-guil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	while (lst){
+	while (lst)
+	{
 		f(lst);
 		lst = lst->next;
 	}

@@ -6,7 +6,7 @@
 /*   By: sle-guil <sle-guil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/14 17:44:10 by sle-guil          #+#    #+#             */
-/*   Updated: 2015/02/24 14:08:07 by sle-guil         ###   ########.fr       */
+/*   Updated: 2015/11/21 13:09:40 by sle-guil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ char			*ft_strtrim(char const *s)
 	size_t	size;
 	char	*new;
 
-	begin = ft_search_begin (s);
+	begin = ft_search_begin(s);
 	size = ft_search_end(s) - begin + 1;
 	if (!s[begin])
 		new = ft_strdup("");
 	else
-		new = ft_strsub (s, begin, size);
+		new = ft_strsub(s, begin, size);
 	return (new);
 }

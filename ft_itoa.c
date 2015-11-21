@@ -6,7 +6,7 @@
 /*   By: sle-guil <sle-guil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 13:32:43 by sle-guil          #+#    #+#             */
-/*   Updated: 2015/02/15 14:45:16 by sle-guil         ###   ########.fr       */
+/*   Updated: 2015/11/21 13:13:14 by sle-guil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ char			*ft_itoa(int n)
 	if (signe == -1 && (new = (char*)malloc(sizeof(char) * (pow + 2))))
 	{
 		new[0] = '-';
-		ft_iter (new + 1, n, pow);
+		ft_iter(new + 1, n, pow);
 	}
 	else if (signe == 1 && (new = (char*)malloc(sizeof(char) * (pow + 1))))
-		ft_iter (new, n, pow);
+		ft_iter(new, n, pow);
 	return (new);
 }

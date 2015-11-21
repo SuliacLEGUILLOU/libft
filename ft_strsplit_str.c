@@ -6,7 +6,7 @@
 /*   By: sle-guil <sle-guil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/09 19:02:21 by sle-guil          #+#    #+#             */
-/*   Updated: 2015/04/14 16:36:46 by sle-guil         ###   ########.fr       */
+/*   Updated: 2015/11/21 13:09:04 by sle-guil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ static t_list	*st_initlst(char *s, char *patern)
 	{
 		if (tmp)
 		{
-				elem = ft_strnew((s - tmp + 1));
-				ft_strncpy(elem, s, s - tmp);
+			elem = ft_strnew((s - tmp + 1));
+			ft_strncpy(elem, s, s - tmp);
 		}
 		else
 			elem = ft_strdup(s);
