@@ -1,2 +1,3 @@
 
-ft_strsplit_str.c		- IS NOT TESTED !!!
+Need to write test !
+Need to finish sorting function !
