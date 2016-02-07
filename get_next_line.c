@@ -27,7 +27,6 @@ int		get_next_line(int const fd, char **line)
 	{
 		buffer[fd][ret] = '\0';
 		*line = ft_strmerge_buff(*line, buffer[fd]);
-		//ft_bzero(buffer[fd], BUFF_SIZE + 1);
 	}
 	if (tmp && (*line) && fd >= 0)
 	{

@@ -17,8 +17,6 @@ char	*ft_strcdup(const char *src, char c)
 	char	*new;
 	int		n;
 
-	if (!src)
-		return (NULL);
 	n = ft_strlen_unt_c(src, c);
 	if (n)
 	{

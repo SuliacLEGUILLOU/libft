@@ -12,38 +12,38 @@
 
 #include "libft.h"
 
-static void		ft_iter(char *str, int n, int pow)
+static void	st_swap(char *p1, char *p2)
 {
-	str[pow] = '\0';
-	while (pow > 0)
-	{
-		pow--;
-		str[pow] = '0' + n % 10;
-		n /= 10;
-	}
+	char	tmp;
+
+	tmp = *p1;
+	*p1 = *p2;
+	*p2 = tmp;
 }
 
-char			*ft_itoa(int n)
+char		*ft_itoa(int value)
 {
-	int		pow;
-	int		signe;
-	char	*new;
+	char	*result;
+	char	*ptr;
+	char	*ptr1;
+	int		tmp_value;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	if (n == 0)
+	if (!(result = malloc(13 * sizeof(char))))
+		return (NULL);
+	ptr = result;
+	ptr1 = result;
+	while (1)
 	{
-		new = ft_strdup("0");
-		return (new);
+		tmp_value = value;
+		value /= 10;
+		*ptr++ = "9876543210123456789"[9 + (tmp_value - value * 10)];
+		if (!value)
+			break ;
 	}
-	signe = ft_getsigne(&n);
-	pow = ft_getpow(n);
-	if (signe == -1 && (new = (char*)malloc(sizeof(char) * (pow + 2))))
-	{
-		new[0] = '-';
-		ft_iter(new + 1, n, pow);
-	}
-	else if (signe == 1 && (new = (char*)malloc(sizeof(char) * (pow + 1))))
-		ft_iter(new, n, pow);
-	return (new);
+	if (tmp_value < 0)
+		*ptr++ = '-';
+	*ptr-- = '\0';
+	while (ptr1 < ptr)
+		st_swap(ptr--, ptr1++);
+	return result;
 }

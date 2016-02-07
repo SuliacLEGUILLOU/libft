@@ -16,8 +16,6 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	char	*tmp;
 
-	if (!s1 || !s2)
-		return (s1);
 	tmp = s1;
 	while (*s1)
 		s1++;

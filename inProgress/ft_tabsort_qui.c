@@ -35,7 +35,7 @@ int		st_getpivot(int *t, size_t max)
 
 void	ft_tabsort_qui(int *tab, size_t max, int (*f)(int, int))
 {
-	int 	begin;
+	int		begin;
 	int		end;
 	int		pivot;
 

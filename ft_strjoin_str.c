@@ -12,24 +12,43 @@
 
 #include "libft.h"
 
-char	*ft_strjoin_str(char const **table, char const *patern)
+static int	st_getlen(char const **table, int patern_len)
 {
-	char	*new;
-	char	*tmp;
+	int		ret;
+	int		overflow;
 	int		i;
 
-	i = 1;
-	if (!(*table))
-		return (NULL);
-	new = ft_strdup(*table);
+	i = 0;
+	ret = 1 - patern_len;
 	while (table[i])
 	{
-		tmp = new;
-		new = ft_strjoin(new, patern);
-		free(tmp);
-		tmp = new;
-		new = ft_strjoin(new, table[i++]);
-		free(tmp);
+		overflow = ret;
+		ret += strlen(table[i]) + patern_len;
+		i++;
+		if (overflow > ret)
+			return (-1);
+	}
+	return (ret);
+}
+
+char		*ft_strjoin_str(char const **table, char const *patern)
+{
+	char	*new;
+	int		i;
+
+	i = st_getlen(table, ft_strlen(patern));
+	if (i < 0)
+		return (NULL);
+	if ((new = malloc(sizeof(char) * i)))
+	{
+		i = 0;
+		*new = '\0';
+		while (table[i])
+		{
+			ft_strcat(new, table[i++]);
+			if (table[i])
+				ft_strcat(new, patern);
+		}
 	}
 	return (new);
 }

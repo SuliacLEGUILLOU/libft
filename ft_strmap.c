@@ -18,8 +18,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	int		i;
 
 	i = 0;
-	if (!s || !f \
-			|| !(new = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
+	if (!(new = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
 		return (NULL);
 	while (s[i])
 	{

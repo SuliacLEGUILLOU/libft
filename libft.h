@@ -19,20 +19,14 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 
-# define S_CHAR		sizeof(char)
-# define S_SHORT	sizeof(short)
-# define S_INT		sizeof(int)
-# define S_FOAT		sizeof(float)
-# define S_LONG		sizeof(long)
-# define S_LLONG	sizeof(long long)
+# include <limits.h>
+# include <errno.h>
+# include <assert.h>
 
-# define TRUE	1
-# define FALSE	0
+# define SUCCESS	0
+# define FAILURE	!0
 
-# define BUFF_SIZE	8
-
-typedef char	t_byte;
-typedef char	t_type;
+# define BUFF_SIZE		40
 
 typedef struct	s_list
 {
@@ -48,7 +42,6 @@ typedef struct	s_list
 **  - Allocation
 */
 void			ft_bzero(void *s, size_t n);
-void			ft_swapb(t_byte *a, t_byte *b);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t n);

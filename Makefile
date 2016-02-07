@@ -49,7 +49,6 @@ SRCS =	ft_getopt.c \
 		ft_memdel.c \
 		ft_memmove.c \
 		ft_memset.c \
-		ft_swapb.c \
 		ft_putchar.c \
 		ft_putchar_fd.c \
 		ft_putendl.c \
@@ -108,11 +107,10 @@ OBJS = $(SRCS:.c=.o)
 CC = clang
 C_FLAG = -Wall -Wextra -Werror -pipe
 
-
 ifeq ($(DEBUG), yes)
 OPT_FLAG = -O0 -g3
 else
-OPT_FLAG = -Os -g0
+OPT_FLAG = -DNDEBUG -Os -g0 -march=native
 endif
 
 #===============================#

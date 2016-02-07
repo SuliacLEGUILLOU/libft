@@ -14,6 +14,8 @@
 
 void	ft_strdel(char **str)
 {
+	while (**str)
+		**str++ = 0;
 	free(*str);
 	*str = NULL;
 }
