@@ -14,7 +14,7 @@
 
 int		get_next_line(int const fd, char **line)
 {
-	static char	buffer[101][BUFF_SIZE + 1] = {{'\0'}};
+	static char	buffer[257][BUFF_SIZE + 1] = {{'\0'}};
 	int			ret;
 	char		*tmp;
 
