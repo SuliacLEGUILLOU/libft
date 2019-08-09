@@ -131,6 +131,7 @@ int				ft_tolower(int c);
 */
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
+char			*ft_itoa_base(int n, int base);
 
 /*
 **		Mathematic tools (In progress. Think about a libmath ?)
