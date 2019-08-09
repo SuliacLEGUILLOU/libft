@@ -62,9 +62,7 @@ char		*ft_itoa_base(int value, int base)
 		if (!value)
 			break ;
 	}
-	if (tmp_value < 0)
-		*ptr++ = '-';
-	*ptr-- = '\0';
+    ptr = st_add_end(ptr, tmp_value, base);
 	while (ptr1 < ptr)
 		st_swap(ptr--, ptr1++);
 	return result;
