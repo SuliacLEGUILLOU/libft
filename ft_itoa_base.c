@@ -59,7 +59,7 @@ char		*ft_itoa_base(int value, int base)
 	{
 		tmp_value = value;
 		value /= base;
-		*ptr++ = "FEDCBA9876543210123456789ABCDE"[9 + (tmp_value - value * base)];
+		*ptr++ = "FEDCBA9876543210123456789ABCDE"[15 + (tmp_value - value * base)];
 		if (!value)
 			break ;
 	}
