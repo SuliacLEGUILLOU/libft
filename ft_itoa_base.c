@@ -21,7 +21,8 @@ static void	st_swap(char *p1, char *p2)
 	*p2 = tmp;
 }
 
-static char	*st_add_end(char *begin, int value, int base){
+static char	*st_add_end(char *begin, int value, int base)
+{
 	if (base == 10 && value < 0)
 		*ptr++ = '-';
 	else if (base == 16)
